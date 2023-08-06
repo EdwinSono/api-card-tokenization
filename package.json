@@ -7,7 +7,7 @@
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
     "build": "tsc -p tsconfig.json",
-    "start": "node ./bin/index.js",
+    "start": "tsc && node ./dist/src/index.js",
     "start-ts": "ts-node ./src/index.ts",
     "test": "jest --coverage"
   },

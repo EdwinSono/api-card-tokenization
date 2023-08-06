@@ -1,14 +1,5 @@
 import ReadCardByTokenQuery from '../../src/queries/readCardByTokenQuery';
 import CardDto from '../../src/domain/dtos/cardDto';
-import ICard from '../../src/domain/interfaces/iCard';
-
-// Mock de un objeto de tarjeta de prueba válida
-// const validCardDataMock : CardDto = {
-//   "email": "edwinso@gmail.com",
-//   "card_number": "4280820153812676",
-//   "expiration_year": "2026",
-//   "expiration_month": "05"
-// };
 
 // Mock del repositorio para simular las llamadas a la base de datos
 const mockCardRepository = {

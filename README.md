@@ -1,66 +1,38 @@
 # API de Tokenización de Tarjetas
 
-
-### Databse
+### Run Databse
 ```sh
 docker-compose up -d postgres
-docker-compose ps
-docker-compose exec postgres bash
-psql -h localhost -d dbBank -U admin
-docker inspect <ID_CONTAINER>
-docker-compose down
 ```
 
-### Tabla
-```sql
-CREATE TABLE cards (
-	id serial PRIMARY KEY,
-	email VARCHAR ( 250 ) NOT NULL,
-    card_number VARCHAR ( 250 ) NOT NULL,
-    cvv VARCHAR ( 10 ) NOT NULL,
-    expiration_year VARCHAR ( 10 ) NOT NULL,
-    expiration_month VARCHAR ( 10 ) NOT NULL,
-    token VARCHAR ( 250 ) NOT NULL,
-	completed boolean DEFAULT false
-);
-```
 ## Install
 ```sh
 npm install
 ```
-## Build
-```sh
-npm run build
-```
 
 ## Run
 ```sh
-npm start
+npm run start-ts
 ```
 
-## Show app
+## Test api
 
-[Show app](http://localhost:3000/)
-[Crear de un token](http://127.0.0.1:3000/api/v1/card)
-[Obtener datos de tarjeta](http://127.0.0.1:3000/api/v1/card?token=112414sfafafaf16)
-
-
-## Case 1: Generate Token
+### Case 1: Generate Token
 ```sh
 curl --location 'http://127.0.0.1:3000/api/v1/card' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "email": "edwinsono@gmail.com",
-    "card_number": "4817831283193913",
-    "cvv": "156",
+    "email": "edwinso@gmail.com",
+    "card_number": "4280820153812676",
+    "cvv": "159",
     "expiration_year": "2026",
     "expiration_month": "05"
 }'
 ```
 
-## Case 2: Read Token
+### Case 2: Read Card by Token
 ```sh
-curl --location 'http://127.0.0.1:3000/api/v1/card?token=mEHGefSNpKahCbWu'
+curl --location 'http://127.0.0.1:3000/api/v1/card?token=pO3JkD0fHZ8kleSM'
 ```
 
 
@@ -68,6 +40,32 @@ curl --location 'http://127.0.0.1:3000/api/v1/card?token=mEHGefSNpKahCbWu'
 ```sh
 npm run test
 ```
+
+## Run Lint
+```sh
+npm run lint
+npm run lint-and-fix
+```
+
+### Others commads
+
+### Docker
+```sh
+docker-compose ps
+docker-compose exec postgres bash
+psql -h localhost -d dbBank -U admin
+docker inspect <ID_CONTAINER>
+docker-compose down
+```
+
+### Build
+```sh
+npm run build
+```
+
+### Show Table
+src/infra/db/migrations/query.sql
+
 
 ## Tecnologías:
 - *Backend*: TypeScript

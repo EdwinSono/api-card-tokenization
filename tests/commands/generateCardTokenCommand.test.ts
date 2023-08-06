@@ -1,6 +1,4 @@
-// Importa la clase que vas a probar y las dependencias necesarias para las pruebas
 import GenerateCardTokenCommand from '../../src/commands/generateCardTokenCommand';
-import CardDto from '../../src/domain/dtos/cardDto';
 import ICard from '../../src/domain/interfaces/iCard'
 
 // Mock del repositorio para simular las llamadas a la base de datos

@@ -1,0 +1,46 @@
+{
+  "name": "api-card-tokenization",
+  "version": "1.0.0",
+  "description": "api card tokenization",
+  "main": "./src/index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "build": "tsc -p tsconfig.json",
+    "start": "node ./bin/index.js",
+    "start-ts": "ts-node ./src/index.ts",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.21.0",
+    "jest-mock-extended": "^3.0.5",
+    "jsonwebtoken": "^9.0.1",
+    "moment-timezone": "^0.5.43",
+    "mongoose": "^7.4.1",
+    "pg": "^8.11.2",
+    "typeorm": "^0.3.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwinsono/api-card-tokenization.git"
+  },
+  "author": "edwinsono",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwinsono/api-card-tokenization/issues"
+  },
+  "homepage": "https://github.com/edwinsono/api-card-tokenization#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.5",
+    "@types/pg": "^8.10.2",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.46.0",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  }
+}
